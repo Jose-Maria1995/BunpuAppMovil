@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "131864932838",
+    "project_id": "bunpuoficial-af8f4",
+    "storage_bucket": "bunpuoficial-af8f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131864932838:android:f9f64e84c0c1a380eea627",
+        "android_client_info": {
+          "package_name": "com.example.bunpuoficial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131864932838-sdehh4m21chh6kdm1e2injk920f98922.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bunpuoficial",
+            "certificate_hash": "6918da4426b53a6f995bff6a004a0ceecf47c778"
+          }
+        },
+        {
+          "client_id": "131864932838-avk49kt7unc607k5m7vqocvhcfkk28f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlZRqGlV9X_QkdinjsNXEQwztUTCsiZtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131864932838-avk49kt7unc607k5m7vqocvhcfkk28f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

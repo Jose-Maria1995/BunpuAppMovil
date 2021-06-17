@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ProfileFragment"
+    android:fitsSystemWindows="true"
+    android:layout_marginBottom="50dp"
+    android:background="@color/pedido_formulario">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:backgroundTint="#FFAC07">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/primer_color">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax"
+                android:transitionName="@string/transtionname_picture">
+
+                <ImageView
+                    android:id="@+id/imageViewCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/fondo_predeterminada"
+                    android:scaleType="centerCrop"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/imagen_perfil_predeterminada"
+                    app:civ_circle_background_color="@color/black"
+                    android:layout_marginTop="130dp"
+                    app:civ_border_width="5sp"
+                    app:civ_border_color="@color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center|right"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textViewTelefono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123123123"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telefono"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textViewProductNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/informacionUsuario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Producto"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textViewUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOMBRE DEL PERFIL"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:id="@+id/textViewEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="correo@gmail.com"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="7dp"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLaoutEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_edit_profile"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDITAR PERFIL"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/pedido_dark_formulario">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:id="@+id/grupoAccionesPP">
+                        <RadioButton
+                            android:background="@drawable/ficha_pedido_radio_button"
+                            android:id="@+id/radioPublicaciones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Productos"
+                            android:layout_weight="1"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:background="@drawable/ficha_pedido_radio_button"
+                            android:id="@+id/radioPedidos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pedid. en cola"
+                            android:layout_weight="1"/>
+                    <RadioButton
+                        android:background="@drawable/ficha_pedido_radio_button"
+                        android:id="@+id/radioPedidosAcabados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pedidos listos"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewProductExist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="No hay Productos"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="italic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

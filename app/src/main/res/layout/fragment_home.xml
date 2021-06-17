@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment"
+    android:layout_marginBottom="50dp"
+    android:background="#FFAC07">
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        app:mt_hint="Texto de busqueda"
+        app:mt_placeholder="Buscar"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_searchBarColor="@color/white"
+        app:mt_placeholderColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mt_searchIconTint="@color/black"
+        app:mt_menuIconTint="@color/black"
+        app:mt_clearIconTint="@color/black"
+        app:mt_hintColor="@color/black"
+        app:mt_backIconTint="@color/black"
+        app:mt_textColor="@color/black"
+        app:mt_leftTextSelectorTint="@color/black"
+        android:id="@+id/searchBar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="58dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+    </LinearLayout>
+
+    </com.mancj.materialsearchbar.MaterialSearchBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_negro"
+        android:backgroundTint="#375E97"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp"/>
+
+</FrameLayout>
